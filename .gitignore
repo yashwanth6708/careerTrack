@@ -1,0 +1,23 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Backups
+*_backup.py
+*_backup/
+*.dump
+*.backup
+*.backup2
+
+# Personal application data
+applications.json
