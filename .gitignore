@@ -3,23 +3,19 @@ __pycache__/
 *.py[cod]
 venv/
 .venv/
-env/
 
-# Environment variables and secrets
+# Secrets
 .env
 .env.*
 
-# Local databases
+# Local database files
 *.db
 *.sqlite3
 
 # Backup files
-*.bak
 *.backup
+*.bak
+*.dump
 
-# IDE files
-.vscode/
-.idea/
-
-# Python testing
-.pytest_cache/
+# Personal application data
+applications.json
