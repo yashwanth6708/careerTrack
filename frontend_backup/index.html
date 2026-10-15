@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerTrack | Job Application Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <h1>CareerTrack</h1>
+            <p>Your personal job search dashboard</p>
+        </div>
+        <span class="header-badge">JOB TRACKER</span>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Welcome to your career dashboard!</h2>
+            <p>Track applications, monitor progress, and stay organized.</p>
+        </section>
+
+        <!-- Dashboard statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Applications</p>
+                <h2 id="total-count">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Applied</p>
+                <h2 id="applied-count">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Interviews</p>
+                <h2 id="interview-count">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Selected</p>
+                <h2 id="selected-count">0</h2>
+            </div>
+        </section>
+
+        <!-- Add application form -->
+        <section class="panel">
+            <h2>Add Job Application</h2>
+
+            <form id="application-form">
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="e.g. Infosys"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Job Role</label>
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="e.g. Python Developer"
+                        maxlength="150"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Application Status</label>
+                    <select id="status">
+                        <option value="Applied">Applied</option>
+                        <option value="Assessment">Assessment</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Selected">Selected</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    + Add Application
+                </button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <!-- Applications table -->
+        <section class="panel">
+            <div class="table-heading">
+                <div>
+                    <h2>My Applications</h2>
+                    <p>Manage and track your job opportunities.</p>
+                </div>
+
+                <button
+                    type="button"
+                    id="refresh-button"
+                    class="secondary-button"
+                >
+                    Refresh
+                </button>
+            </div>
+
+            <!-- Search and filter -->
+            <div class="filters">
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search company or job role..."
+                    aria-label="Search applications"
+                >
+
+                <select id="status-filter" aria-label="Filter by status">
+                    <option value="All">All Statuses</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Assessment">Assessment</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Update Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applications-table">
+                        <tr>
+                            <td colspan="6">Loading applications...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CareerTrack &copy; 2026 | Built with FastAPI and PostgreSQL</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

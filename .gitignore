@@ -1,23 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
 # Environment variables and secrets
 .env
 .env.*
-!.env.example
 
-# Python virtual environments
-venv/
-.venv/
+# Local databases
+*.db
+*.sqlite3
 
-# Python cache
-__pycache__/
-*.py[cod]
-.pytest_cache/
-
-# Backups
-*_backup.py
-*_backup/
-*.dump
+# Backup files
+*.bak
 *.backup
-*.backup2
 
-# Personal application data
-applications.json
+# IDE files
+.vscode/
+.idea/
+
+# Python testing
+.pytest_cache/
